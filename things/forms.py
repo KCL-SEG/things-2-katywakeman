@@ -8,7 +8,7 @@ class ThingForm(forms.ModelForm):
     class Meta:
         model = Thing
         fields = ['name', 'description', 'quantity']
-        description = forms.CharField(widget=forms.Textarea)
+        description = forms.CharField(widget=forms.Textarea(attrs={'name':'description', 'rows':3, 'cols':5}))
     def clean_quantity(self):
         quantity = self.cleaned_data['quantity']
 
