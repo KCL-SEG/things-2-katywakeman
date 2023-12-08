@@ -20,13 +20,7 @@ class ThingForm(forms.ModelForm):
 
     # Additional form-level validation can be defined here if needed.
 
-    # Individual form fields
-    name = forms.CharField(max_length=30)
-    description = forms.CharField(max_length=120)
-    quantity = forms.IntegerField(validators=[
-        MinValueValidator(0),
-        MaxValueValidator(100),
-    ])
+
 
 
 
