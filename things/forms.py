@@ -15,7 +15,7 @@ class ThingForm(forms.ModelForm):
             'quantity': 'Quantity',
         }
         widgets = {
-            'description': forms.Textarea(attrs={'rows': 3, 'cols': 5}),
+            'description': forms.Textarea(), 'quantity':forms.NumberInput()
         }
 
     # Additional form-level validation can be defined here if needed.
