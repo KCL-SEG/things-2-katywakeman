@@ -9,11 +9,6 @@ class ThingForm(forms.ModelForm):
     class Meta:
         model = Thing
         fields = ['name', 'description', 'quantity']
-        labels = {
-            'name': 'Name',
-            'description': 'Description',
-            'quantity': 'Quantity',
-        }
         widgets = {
             'description': forms.Textarea(), 'quantity':forms.NumberInput()
         }
